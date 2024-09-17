@@ -19,7 +19,7 @@
                         <div class="hours">
                             <h6 class="mt-4">Email:</h6>
                             <p>
-                            <a href="mailto:HEALFOUNDATIONSA@GMAIL.COM">HEALFOUNDATIONSA@GMAIL.COM</a>
+                                <a href="mailto:HEALFOUNDATIONSA@GMAIL.COM">HEALFOUNDATIONSA@GMAIL.COM</a>
                             </p>
                             <h6 class="mt-4">Address:</h6>
                             <p>87 Harbottle road overport, KwaZulu Natal, South Africa</p>
@@ -44,7 +44,7 @@
                             <img src="~/images/Team.jpg" alt="Contact Us" class="img-fluid mb-4 hover-move" />
                         </div>
                     </footer>
-            </div>
+                </div>
             </div>
 
             <div class="d-flex justify-content-center">
@@ -55,14 +55,47 @@
                         <p>Description: This is the location of Heal Foundation in Overport, Durban.</p>
                     </div>
                     <div class="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.035246509278!2d30.988379515520667!3d-29.8418254819638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7006cb8c5e77d%3A0x21e5b85d9942af30!2sArya%20Samaj%20South%20Africa%20-%20National%20Headquarters!5e0!3m2!1sen!2sza!4v1623940973170!5m2!1sen!2sza" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <!-- Map container -->
+                        <div id="map" style="height: 500px; width: 100%;"></div>
+
+                        <!-- Include Leaflet.js and Leaflet CSS -->
+                        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+                        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+                        <script>
+                            // Initialize the map, centered on Pietermaritzburg with zoom level 10
+                            var map = L.map('map').setView([-29.6006, 30.3794], 10);
+
+                            // Add OpenStreetMap tiles
+                            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                attribution: '&copy; OpenStreetMap contributors'
+                            }).addTo(map);
+
+                            // Define locations (latitude, longitude, name)
+                            var locations = [
+                                { lat: -29.6006, lng: 30.3794, name: "Pietermaritzburg" },
+                                { lat: -29.5801, lng: 31.1186, name: "oThongathi (Tongaat)" },
+                                { lat: -29.7067, lng: 31.0153, name: "Phoenix" },
+                                { lat: -29.8838, lng: 30.9246, name: "Queensburgh" },
+                                { lat: -29.9766, lng: 30.9294, name: "Isipingo" },
+                                { lat: -30.0542, lng: 30.8904, name: "Amanzimtoti" }
+                            ];
+
+                            // Loop through locations and add markers
+                            locations.forEach(function (location) {
+                                L.marker([location.lat, location.lng]).addTo(map)
+                                    .bindPopup(location.name) // Show location name in popup
+                                    .openPopup();
+                            });
+                        </script>
                     </div>
                 </div>
+            </div>
         </div>
     </div>
 </section>
 
-<<!-- Privacy Policy Footer -->
+<!-- Privacy Policy Footer -->
 <footer class="text-center mt-5">
     <a href="/Home/Privacy" class="custom-green-link">Privacy Policy</a>
 </footer>

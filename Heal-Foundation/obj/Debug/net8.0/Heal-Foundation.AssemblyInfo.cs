@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Heal-Foundation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97f5f2aaaa338818e84444b319076d372f1c6723")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b76a67145e57036d0f603624b8e4e1b6d1cfcc6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Heal-Foundation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Heal-Foundation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

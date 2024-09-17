@@ -52,14 +52,14 @@ using (var scope = app.Services.CreateScope())
 {
 	var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 	var roles = new[] { "Admin" };
-	foreach (var role in roles)
+			foreach (var role in roles)
 
-	{
-		if (!await roleManager.RoleExistsAsync(role))
-			await roleManager.CreateAsync(new IdentityRole(role));
+			{
+				if (!await roleManager.RoleExistsAsync(role))
+					await roleManager.CreateAsync(new IdentityRole(role));
 
-	}
-}
+			}
+		}
 		using (var scope = app.Services.CreateScope())
 		{
 			var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
