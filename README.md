@@ -1,1 +1,1 @@
- #  InnoTech Website developed for Heal Foundation
+ #  InnoTech Solutions Website developed for Heal Foundation
