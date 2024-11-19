@@ -1,5 +1,6 @@
  # InnoTech Solutions Website developed for Heal Foundation
  Website Link- https://heal20241113203237.azurewebsites.net/
+ 
  Demo Video- https://drive.google.com/file/d/1GNfJO7ER9YuOeyRhK1EjXjc3LUr65cDR/view?usp=sharing
 
 Version 1.2-Other versions had to be replaced due to errors
@@ -26,10 +27,9 @@ Users can either access the website from the link provided or clone the reposito
 
 
 
-
 For any queries or support, contact us at:
 📩 HEALFOUNDATIONSA@GMAIL.COM 
-
+or Tashagovender03@gmail.com
 
 # Technologies Used
 Frontend
